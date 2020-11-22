@@ -92,11 +92,11 @@ const Notes = (props) => {
             display: "none",
             
           });
-          window.location.reload();
+         
 
 
         }
-
+ window.location.reload();
       }
       ));
   }
@@ -107,8 +107,8 @@ const Notes = (props) => {
       <button className="mt-3 btn btn-info" id="order-btn" onClick={() => seeOlder()}>See Older notes first</button>
         <div className="row">
           {
-            notes.map(note => <div key={note._id} className="col-12 col-md-3">
-              <div className="note-card">
+            notes.map(note => <div key={note._id} className="col-12 col-md-3" >
+              <div className="note-card" style={{display: `${deleted.display}`}}>
               <p><strong>Date: </strong>{note.date}</p>
               <h3>{note.note}</h3>
              <div className="buttons mt-5">
